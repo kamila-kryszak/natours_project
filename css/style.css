@@ -35,20 +35,50 @@ body {
 
 }
 
-.header__logo--box {
+
+
+.header__button:link,
+.header__button:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+
+}
+
+.header__button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2)
+}
+
+.header__button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)
+}
+
+.header__button--white {
+    background-color: #fff;
+    color: #777;
+
+}
+
+.header__box--logo {
     position: absolute;
     top: 40px;
     left: 40px;
 }
 
-.header__text--box {
+.header__box--text {
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 
-.logo {
+.header__logo {
     height: 35px;
 }
 
@@ -56,6 +86,7 @@ body {
     color: #fff;
     text-transform: uppercase;
     backface-visibility: hidden;
+    margin-bottom: 50px;
 }
 
 .main__heading--big {
