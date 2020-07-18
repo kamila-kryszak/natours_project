@@ -13,6 +13,7 @@ $color-primary-dark:#28b485;
 
 $color-grey-dark: #777;
 $color-white: #fff;
+$color-black: #000;
 
 *,
 *::before,
@@ -47,107 +48,107 @@ body {
     position: relative;
     clip-path: polygon(0 0, 100% 0, 100% 73vh, 0 100%);
 
+    &__button:link,
+    &__button:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all .2s;
+        position: relative;
+        font-size: 1.6rem;
+
+    }
+
+    &__button:hover {
+        transform: translateY(-3px);
+
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+        &::after {
+            transform: scaleX(1.3) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+
+    &__button:active {
+        transform: translateY(-1px);
+        box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2)
+    }
+
+    &__button--white {
+        background-color: $color-white;
+        color: $color-grey-dark;
+
+        &::after {
+            background-color: $color-white;
+        }
+
+    }
+
+    &__button::after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
+
+    &__button--animated {
+        animation: moveInBottom .5s ease-out .75s;
+        animation-fill-mode: backwards;
+    }
+
+    &__box--logo {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+
+    &__box--text {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    &.__logo {
+        height: 3.5rem;
+    }
 }
 
-
-
-.header__button:link,
-.header__button:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1.5rem 4rem;
-    display: inline-block;
-    border-radius: 10rem;
-    transition: all .2s;
-    position: relative;
-    font-size: 1.6rem;
-
-}
-
-.header__button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2)
-}
-
-.header__button:active {
-    transform: translateY(-1px);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2)
-}
-
-.header__button--white {
-    background-color: $color-white;
-    color: $color-grey-dark;
-
-}
-
-.header__button::after {
-    content: "";
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    border-radius: 10rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all .4s;
-}
-
-.header__button--white::after {
-    background-color: $color-white;
-}
-
-.header__button:hover::after {
-    transform: scaleX(1.3) scaleY(1.6);
-    opacity: 0;
-
-}
-
-.header__button--animated {
-    animation: moveInBottom .5s ease-out .75s;
-    animation-fill-mode: backwards;
-}
-
-.header__box--logo {
-    position: absolute;
-    top: 4rem;
-    left: 4rem;
-}
-
-.header__box--text {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.header__logo {
-    height: 3.5rem;
-}
 
 .main__heading {
     color: $color-white;
     text-transform: uppercase;
     backface-visibility: hidden;
     margin-bottom: 5rem;
+
+    &--big {
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+        animation: moveInLeft 2s ease-out;
+    }
+
+    &--small {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.75rem;
+        animation: moveInRight 2s ease-out;
+    }
+
 }
 
-.main__heading--big {
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    animation: moveInLeft 2s ease-out;
-}
-
-.main__heading--small {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.75rem;
-    animation: moveInRight 2s ease-out;
-}
 
 @keyframes moveInLeft {
     0% {
