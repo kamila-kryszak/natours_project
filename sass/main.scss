@@ -19,29 +19,3 @@ Dark green: #28b485
 @import "layout/header";
 
 @import "pages/home";
-
-
-
-.main__heading {
-    color: $color-white;
-    text-transform: uppercase;
-    backface-visibility: hidden;
-    margin-bottom: 5rem;
-
-    &--big {
-        display: block;
-        font-size: 6rem;
-        font-weight: 400;
-        letter-spacing: 3.5rem;
-        animation: moveInLeft 2s ease-out;
-    }
-
-    &--small {
-        display: block;
-        font-size: 2rem;
-        font-weight: 700;
-        letter-spacing: 1.75rem;
-        animation: moveInRight 2s ease-out;
-    }
-
-}
