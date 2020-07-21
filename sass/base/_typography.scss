@@ -32,22 +32,67 @@ body {
 
 }
 
-.section__about--heading {
-    display: inline-block;
-    font-size: 3.5rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
-    -webkit-background-clip: text;
-    color: transparent;
-    letter-spacing: .2rem;
-    transition: all .2s;
+.section-about {
+    background-color: $color-grey-light-1;
+    padding: 25rem 0;
+    margin-top: -22vh;
 
-    &:hover {
-        transform: skew(15deg, 2deg) scale(1.1);
-        text-shadow: .5rem 1rem 5rem rgba($color-black, .2);
+    &__button {
+
+        &:link,
+        &:visited {
+            font-size: $default-font-size;
+            color: $color-primary;
+            display: inline-block;
+            text-decoration: none;
+            border-bottom: 1px solid $color-primary;
+            padding: 3px;
+            transition: all .2s;
+        }
+
+        &:hover {
+            background-color: $color-primary;
+            color: $color-white;
+            box-shadow: 0 1rem 2rem rgba($color-black, .15);
+            transform: translateY(-2px);
+        }
+
+        &:active {
+            box-shadow: 0 .5rem 1rem rgba($color-black, .15);
+            transform: translateY(0);
+        }
+    }
+
+    &__paragraph {
+        font-size: $default-font-size;
+
+        &:not(:last-child) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__heading {
+        display: inline-block;
+        font-size: 3.5rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+        -webkit-background-clip: text;
+        color: transparent;
+        letter-spacing: .2rem;
+        transition: all .2s;
+
+        &:hover {
+            transform: skew(15deg, 2deg) scale(1.1);
+            text-shadow: .5rem 1rem 5rem rgba($color-black, .2);
+        }
 
 
 
+        &--small {
+            font-size: $default-font-size;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
     }
 }

@@ -73,24 +73,58 @@ body {
     letter-spacing: 1.75rem;
     animation: moveInRight 2s ease-out; }
 
-.section__about--heading {
-  display: inline-block;
-  font-size: 3.5rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  background-image: linear-gradient(to right, #7ed56f, #28b485);
-  -webkit-background-clip: text;
-  color: transparent;
-  letter-spacing: .2rem;
-  transition: all .2s; }
-  .section__about--heading:hover {
-    transform: skew(15deg, 2deg) scale(1.1);
-    text-shadow: 0.5rem 1rem 5rem rgba(0, 0, 0, 0.2); }
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -22vh; }
+  .section-about__button:link, .section-about__button:visited {
+    font-size: 1.6rem;
+    color: #55c57a;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid #55c57a;
+    padding: 3px;
+    transition: all .2s; }
+  .section-about__button:hover {
+    background-color: #55c57a;
+    color: #fff;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px); }
+  .section-about__button:active {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    transform: translateY(0); }
+  .section-about__paragraph {
+    font-size: 1.6rem; }
+    .section-about__paragraph:not(:last-child) {
+      margin-bottom: 3rem; }
+  .section-about__heading {
+    display: inline-block;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-image: linear-gradient(to right, #7ed56f, #28b485);
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: .2rem;
+    transition: all .2s; }
+    .section-about__heading:hover {
+      transform: skew(15deg, 2deg) scale(1.1);
+      text-shadow: 0.5rem 1rem 5rem rgba(0, 0, 0, 0.2); }
+    .section-about__heading--small {
+      font-size: 1.6rem;
+      font-weight: 700;
+      text-transform: uppercase; }
 
 .u-center-text {
   text-align: center; }
 
-.u-margin-bottom-8 {
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem; }
+
+.u-margin-bottom-big {
   margin-bottom: 8rem; }
 
 .header {
@@ -149,8 +183,3 @@ body {
     text-align: center; }
   .header__logo {
     height: 3.5rem; }
-
-.section__about {
-  background-color: #f7f7f7;
-  padding: 25rem 0;
-  margin-top: -22vh; }
